@@ -2,13 +2,13 @@ num = int(input('Digite um número: '))
 c = True
 print()
 
-base = int(input('1 - Binário\n2 - Octal\n3 - hexadecimal\nQual a base que você quer que converta? '))
+base = str(input('Qual a base que você quer que converta, binário, octal ou hexadecimal? \n')).lower()
 n = num
 bin = ''
 oct = ''
 hex = ''
 
-if base == 1:
+if base == 'binário' or base == 'binario':
     while n != 1:
         bin += str(n % 2)
         n = int(n / 2)
@@ -18,7 +18,7 @@ if base == 1:
 
     print('O número {} convertido para binário é {}'.format(num, bin))
     c == False
-elif base == 2:
+elif base == 'octal':
     while n > 8:
         oct += str(n % 8)
         n = int(n / 8)
@@ -28,7 +28,7 @@ elif base == 2:
 
     print('O número {} convertido para octal é {}'.format(num, oct))
     c == False
-elif base == 3:
+elif base == 'hexadecimal':
     
     while n > 16:
         res = n % 16
